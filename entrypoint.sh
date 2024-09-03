@@ -38,6 +38,11 @@ if [ ! -z "$PIXMA_HOSTS" ]; then
   done
 fi
 
+#EPSONDS driver config USB device (oneliner)
+if [ ! -z "$EPSONDS" ]; then
+  echo "$EPSONDS" > /etc/sane.d/epsonds.conf
+fi
+
 unset IFS
 set +f
 
