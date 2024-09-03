@@ -140,3 +140,8 @@ RUN apt-get update \
   && dpkg -i /tmp/brscan4.deb \
   && rm /tmp/brscan4.deb \
   && echo brscan4 >> /etc/sane.d/dll.conf
+
+# EPSONDS (ET-2760) image
+# ==============================================================================
+FROM scanservjs-core AS scanservjs-epsonds
+ENV EPSONDS=""
